@@ -15,7 +15,7 @@ project we are going to keep adding layers of complexity 'till we have a super f
 Now to make it a bit easier, instead of having the user create their own quizzes we are going to consume the open
 trivia database. Here we can fetch multiple choice questions with possible answers! (And the correct one of course ;) )
 
-### Getting started.
+### PREPARATION:
 1. Know what react is:
    - One of the most popular JavaScript libraries used to build UI on the front-end.  React is all about re-using code.
 2. Create a React project in the terminal: ```npx create-react-app kahoot-but-better```
@@ -83,10 +83,36 @@ return () => clearTimeout(timer)
 }, []);
 
 ```
- - useContext: Manage state globally.  It can be used together with the useState Hook to share state between deeply 
-nested components more easily than with useState alone. 
+### THE ACTION:
+1. For starters, I created a directory for the components to live in.
+2. The header:  
+- Inside the component directory create a Header.js-file.
+    * import react
+    * import the Header.css-file to style it later.
+    * start making a component which starts with a capital.
+    * make it return the head-title via the <h1>-html-attribute.
+    * export the header.
+```
+import React from "react";
+import 'Header.css';
+
+function Header() {
+    return (
+        <h1>Let's play some Trivia!</h1>
+    )
+}
+
+export default Header;
+```
+- Inside the App.js:
+    * import Header.js.
+    * add the Header-elements inside the app-function.
+- Inside the Header.css:
+    * add style to the Header-elements.
+  
+
 
 
    
    
- # kahoot-but-better-react
+
